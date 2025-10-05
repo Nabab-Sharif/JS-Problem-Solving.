@@ -1,15 +1,18 @@
 
-const makeBreakfast=(callback)=>{
-    console.log("Cooking breakfast....");  
-    
+//Data Load Function (main)
+const loadData=(callback)=>{
+    console.log("Loading data from server.....")
+
     setTimeout(()=>{
-        console.log("Breakfast is ready");
+        console.log("Data loaded successfully");
         callback();
-    },3000);
+    },2000)
 }
 
-function eatBreakfast(){
-    console.log("Eating breakfast now....")
+//callback function
+const showDashboard=()=>{
+    console.log("Showing Dashboard to User...")
 }
 
-makeBreakfast(eatBreakfast);
+//Main Call
+ loadData(showDashboard)
